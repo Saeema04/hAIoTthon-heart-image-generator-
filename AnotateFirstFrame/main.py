@@ -5,6 +5,7 @@ import cv2
 import matplotlib.pyplot as plt
 import pydicom
 import os
+import tkinter
 
 image_files = find_files()
 frNum = int(input('Enter frame number: '))
