@@ -3,6 +3,7 @@ import numpy as np
 from  pathlib import Path
 import pydicom, cv2
 import matplotlib.pyplot as plt
+import tkinter 
 
 root = Path(os.getcwd())
 data = root / "data"
