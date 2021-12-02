@@ -74,6 +74,27 @@ def read_image(path, num=0):
     image = np.zeros(shape=(256, 256))
     image[:im.shape[0],:im.shape[1]] = im.copy()
     image = image / (np.max(image))
+    ### gausian filter 3x3
+    # image = cv2.GaussianBlur(image, (3,3), 0)
+    ### gaussian filter 5x5
+    # image = cv2.GaussianBlur(image, (3,3), 0)
+    ### laplacian filter 3x3
+    # image = cv2.Laplacian(image, cv2.CV_64F, ksize=3)
+    # image = cv2.convertScaleAbs(image)
+    ### low pass filter
+    # kernel = np.ones((3,3), np.uint8)
+    # kernel = kernel / np.sum(kernel)
+    # image = cv2.filter2D(image, -1, kernel)
+    # image = cv2.convertScaleAbs(image)
+
+    ### high pass filter
+    # kernel = np.array([[0.0, -1.0, 0.0], 
+    #                [-1.0, 4.0, -1.0],
+    #                [0.0, -1.0, 0.0]])
+    # kernel = kernel/(np.sum(kernel) if np.sum(kernel)!=0 else 1)
+    # image = cv2.filter2D(image, -1, kernel)
+    # image = cv2.convertScaleAbs(image)
+    
     return image
 
 

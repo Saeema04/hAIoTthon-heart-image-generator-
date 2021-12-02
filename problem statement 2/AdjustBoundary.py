@@ -113,6 +113,7 @@ def draw_circle(event, x, y, flags, param):
 
 #-------------------------------------------------------------
 distance = lambda p1, p2: math.sqrt((p1[0]-p2[0])**2 + (p1[1]-p2[1])**2)
+
 def updateContour(ctr, centre, radius):
     #centroid = (np.mean(ctr[:, 0]), np.mean(ctr[:, 1]))
     centroid = (300.0, 300.0)
